@@ -1,4 +1,4 @@
-# Домашнее задание к занятию "`git`" - `Хамитов Денис`
+# Домашнее задание к занятию "`Gitlab`" - `Хамитов Денис`
 
 
 ### Инструкция по выполнению домашнего задания
@@ -23,15 +23,39 @@
 ---
 
 ### Задание 1
+Скриншоты с настройками раннера в проекте
 
-https://github.com/dvkhamitov/8-01-1/commit/2b12df5c06f43a2a22e22e524d1d53dfa595b598
+![alt txt](https://github.com/dvkhamitov/8-03-hw/blob/main/img/1-1-1.png "скриншот #1")
+![alt txt](https://github.com/dvkhamitov/8-03-hw/blob/main/img/1-2-1.png "скриншот #2")
 
 
 ---
 
 ### Задание 2
 
-https://github.com/dvkhamitov/8-01-1/commit/0fc34b37c5a74a60ff45ee0a864ab3f6084e62f2
+gitlab-ci.yml:
+
+```
+stages:
+  - test
+  - build
+
+test:
+  stage: test
+  image: golang:1.17
+  script: 
+   - go test .
+
+build:
+  stage: build
+  image: docker:latest
+  script:
+   - docker build .
+```
+Скриншоты успешной сборки:
+![alt txt](https://github.com/dvkhamitov/8-03-hw/blob/main/img/2-1-1.png "скриншот #1")
+![alt txt](https://github.com/dvkhamitov/8-03-hw/blob/main/img/2-1-2.png "скриншот #2")
+![alt txt](https://github.com/dvkhamitov/8-03-hw/blob/main/img/2-1-3.png "скриншот #3")
 
 ---
 
